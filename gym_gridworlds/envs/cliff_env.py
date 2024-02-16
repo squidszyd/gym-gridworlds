@@ -32,7 +32,7 @@ class CliffEnv(gym.Env):
             return self.S, -1, True, {}
         elif self.S[1] != 0 and self.S[0] == self.height - 1:
             # the cliff
-            return self.reset(), -100, False, {}
+            return self.reset()[0], -100, False, {}
         return self.S, -1, False, {}
 
     def reset(self, seed=None, options=None):
